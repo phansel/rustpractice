@@ -3,7 +3,7 @@ extern crate rand;
 use rand::Rng;
 
 fn main() {
-    let mut m: Vec<P> = Vec::with_capacity(100);
+    let mut m: Vec<P> = Vec::with_capacity(1331);
     let dp: (f32, f32, f32) = (-500.0,-500.0,-500.0);
     let dn: (f32, f32, f32) = (500.0,500.0,500.0);
 
@@ -23,7 +23,7 @@ fn main() {
             n, _a, _b, _c, a, b, c);
     }
 
-    let mut t = [0.0;20];
+    let mut t = [0.0;200];
 
     for n in 0..20 {
         t[n] = (n as f32)*0.1*3.14159;
