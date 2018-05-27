@@ -42,4 +42,3 @@ fn n_to_char (n: i32) -> char {
         _ => {println!("Error: what is {}?",n);'u'},
     }
 }
-// annoyed at the lack of comments? email me.
