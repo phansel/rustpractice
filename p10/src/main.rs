@@ -1,19 +1,24 @@
+extern crate rand;
+
+use rand::Rng;
+
 fn main() {
     let mut l: Vec<L> = Vec::with_capacity(19);
     for i in 0..18 {
-        let _a = 'a';
-        let _rs = ('0','0','0','0','0','0');
-        let _ss = ('0','0','0','0','0','0');
-        let _l = L { x: i, a: _a, rs: _rs, ss: _ss};
+        let _r = n_to_char(rand::thread_rng().gen_range(1,6));
+        let _rds = ('0','0','0','0','0','0');
+        let _sts = ('0','0','0','0','0','0');
+        let _l = L { x: i, r: _r, rds: _rds, sts: _sts};
         l.push(_l);
+        println!("r is {}", _r);
     }
 }
 
 struct L {
     x: i32,
-    a: char,
-    rs: (char, char, char, char, char, char),
-    ss: (char, char, char, char, char, char),
+    r: char,
+    rds: (char, char, char, char, char, char),
+    sts: (char, char, char, char, char, char),
 }
 
 fn char_to_n (c: char) -> i32 {
