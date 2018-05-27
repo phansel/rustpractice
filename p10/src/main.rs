@@ -3,6 +3,9 @@ extern crate rand;
 use rand::Rng;
 
 fn main() {
+    let set_t = ['w','r','g','b','s','d'];
+    let set_n = [4,3,4,3,4,1];
+
     let mut l: Vec<L> = Vec::with_capacity(19);
     for i in 0..18 {
         let _r = n_to_char(rand::thread_rng().gen_range(1,6));
@@ -28,6 +31,7 @@ fn char_to_n (c: char) -> i32 {
         'g' => 3,
         'b' => 4,
         's' => 5,
+        'd' => 6,
         _ => {println!("Error: what is {}?",c);0},
     }
 }
@@ -39,6 +43,7 @@ fn n_to_char (n: i32) -> char {
         3 => 'g',
         4 => 'b',
         5 => 's',
+        6 => 'd',
         _ => {println!("Error: what is {}?",n);'u'},
     }
 }
