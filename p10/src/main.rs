@@ -23,7 +23,7 @@ fn char_to_n (c: char) -> i32 {
         'g' => 3,
         'b' => 4,
         's' => 5,
-        _ => 0,
+        _ => {println!("Error: what is {}?",c); 0},
     }
 }
 
@@ -34,6 +34,6 @@ fn n_to_char (n: i32) -> char {
         3 => 'g',
         4 => 'b',
         5 => 's',
-        _ => 'u',
+        _ => {println!("Error: what is {}?",n);'u'},
     }
 }
